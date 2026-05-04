@@ -1,0 +1,116 @@
+{
+  "artist": "Jubin Nautiyal",
+  "image": "/assets/artists/jubin-nautiyal.jpg",
+  "songs": [
+    {
+      "id": "barsaatkidhun",
+      "title": "Barsaat Ki Dhun",
+      "file": "BarsaatKiDhun.mp3"
+    },
+    {
+      "id": "bewafachehramasoom",
+      "title": "Bewafachehra Masoom",
+      "file": "BewafachehraMasoom.mp3"
+    },
+    {
+      "id": "bhuladunga",
+      "title": "Bhula Dunga",
+      "file": "BhulaDunga.mp3"
+    },
+    {
+      "id": "dheeredheeretumsep",
+      "title": "Dheere Dheere Tumse P",
+      "file": "DheereDheereTumseP.mp3"
+    },
+    {
+      "id": "dilgaltikarbaithahai",
+      "title": "Dil Galti Kar Baitha Hai",
+      "file": "DilGaltiKarBaithaHai.mp3"
+    },
+    {
+      "id": "diltodke",
+      "title": "Dil Tod Ke",
+      "file": "DilTodKe.mp3"
+    },
+    {
+      "id": "humnavamere",
+      "title": "Humnava Mere",
+      "file": "HumnavaMere.mp3"
+    },
+    {
+      "id": "kauntujhe",
+      "title": "Kaun Tujhe",
+      "file": "KaunTujhe.mp3"
+    },
+    {
+      "id": "kinnasona",
+      "title": "Kinna Sona",
+      "file": "KinnaSona.mp3"
+    },
+    {
+      "id": "lutgaye",
+      "title": "Lut Gaye",
+      "file": "LutGaye.mp3"
+    },
+    {
+      "id": "mainjisdinbhuladu",
+      "title": "Main Jis Din Bhuladu",
+      "file": "MainJisDinBhuladu.mp3"
+    },
+    {
+      "id": "meresohneya",
+      "title": "Mere Sohneya",
+      "file": "MereSohneya.mp3"
+    },
+    {
+      "id": "meriaashiqui",
+      "title": "Meri Aashiqui",
+      "file": "MeriAashiqui.mp3"
+    },
+    {
+      "id": "merizindagi",
+      "title": "Meri Zindagi",
+      "file": "MeriZindagi.mp3"
+    },
+    {
+      "id": "nailagda",
+      "title": "Nai Lagda",
+      "file": "NaiLagda.mp3"
+    },
+    {
+      "id": "pehlidafa",
+      "title": "Pehli Dafa",
+      "file": "PehliDafa.mp3"
+    },
+    {
+      "id": "ram",
+      "title": "Ram",
+      "file": "Ram.mp3"
+    },
+    {
+      "id": "sanamre",
+      "title": "Sanam Re",
+      "file": "SanamRe.mp3"
+    },
+    {
+      "id": "terabanjaunga",
+      "title": "Tera Ban Jaunga",
+      "file": "TeraBanJaunga.mp3"
+    },
+    {
+      "id": "tubhiroyega",
+      "title": "Tu Bhi Royega",
+      "file": "TuBhiRoyega.mp3"
+    },
+    {
+      "id": "tujhekitna",
+      "title": "Tujhe Kitna",
+      "file": "TujheKitna.mp3"
+    },
+    {
+      "id": "tumhiaana",
+      "title": "Tum Hi Aana",
+      "file": "TumHiAana.mp3"
+    }
+  ]
+}

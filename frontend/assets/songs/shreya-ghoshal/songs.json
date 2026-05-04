@@ -1,0 +1,186 @@
+{
+  "artist": "Shreya Ghoshal",
+  "image": "/assets/artists/shreya-ghoshal.jpg",
+  "songs": [
+    {
+      "id": "aashiyan",
+      "title": "aashiyan",
+      "file": "aashiyan.mp3"
+    },
+    {
+      "id": "apnabanale",
+      "title": "Apna Bana Le",
+      "file": "ApnaBanaLe.mp3"
+    },
+    {
+      "id": "bairipiyadevdas128kbps",
+      "title": "Bairi Piya Devdas128Kbps",
+      "file": "BairiPiyaDevdas128Kbps.mp3"
+    },
+    {
+      "id": "bairiyaaramaiyavastavaiya128kbps",
+      "title": "Bairiyaa Ramaiya Vastavaiya128Kbps",
+      "file": "BairiyaaRamaiyaVastavaiya128Kbps.mp3"
+    },
+    {
+      "id": "banno",
+      "title": "Banno",
+      "file": "Banno.mp3"
+    },
+    {
+      "id": "chakachak",
+      "title": "Chaka Chak",
+      "file": "ChakaChak.mp3"
+    },
+    {
+      "id": "chiknichameli",
+      "title": "Chikni Chameli",
+      "file": "ChikniChameli.mp3"
+    },
+    {
+      "id": "deewaanadeewaana-tereishkmein-128kbps-",
+      "title": "Deewaana Deewaana-Tere Ishk Mein(128kbps)",
+      "file": "DeewaanaDeewaana-TereIshkMein(128kbps).mp3"
+    },
+    {
+      "id": "deewanimastani",
+      "title": "Deewani Mastani",
+      "file": "DeewaniMastani.mp3"
+    },
+    {
+      "id": "devadeva",
+      "title": "Deva Deva",
+      "file": "DevaDeva.mp3"
+    },
+    {
+      "id": "dhadak",
+      "title": "Dhadak",
+      "file": "Dhadak.mp3"
+    },
+    {
+      "id": "dholida",
+      "title": "Dholida",
+      "file": "Dholida.mp3"
+    },
+    {
+      "id": "ghoomar",
+      "title": "Ghoomar",
+      "file": "Ghoomar.mp3"
+    },
+    {
+      "id": "humpty",
+      "title": "Humpty",
+      "file": "Humpty.mp3"
+    },
+    {
+      "id": "jabsaiyaan",
+      "title": "Jab Saiyaan",
+      "file": "JabSaiyaan.mp3"
+    },
+    {
+      "id": "jhoomjopathaan",
+      "title": "Jhoom Jo Pathaan",
+      "file": "JhoomJoPathaan.mp3"
+    },
+    {
+      "id": "kauntujhe-16",
+      "title": "Kaun Tujhe",
+      "file": "KaunTujhe(2).mp3"
+    },
+    {
+      "id": "kesariya",
+      "title": "Kesariya",
+      "file": "Kesariya.mp3"
+    },
+    {
+      "id": "manwalaage",
+      "title": "Manwa Laage",
+      "file": "ManwaLaage.mp3"
+    },
+    {
+      "id": "mastmagan",
+      "title": "Mast Magan",
+      "file": "MastMagan.mp3"
+    },
+    {
+      "id": "mererashkeqamar",
+      "title": "Mere Rashke Qamar",
+      "file": "MereRashkeQamar.mp3"
+    },
+    {
+      "id": "merijaan",
+      "title": "Meri Jaan",
+      "file": "MeriJaan.mp3"
+    },
+    {
+      "id": "moherangdolaal",
+      "title": "Mohe Rang Do Laal",
+      "file": "MoheRangDoLaal.mp3"
+    },
+    {
+      "id": "nainonebaandhi",
+      "title": "Naino Ne Baandhi",
+      "file": "NainoNeBaandhi.mp3"
+    },
+    {
+      "id": "palpaldilkepas",
+      "title": "Pal Pal Dil Ke Pas",
+      "file": "PalPalDilKePas.mp3"
+    },
+    {
+      "id": "paramsundari",
+      "title": "Param Sundari",
+      "file": "ParamSundari.mp3"
+    },
+    {
+      "id": "radha",
+      "title": "Radha",
+      "file": "Radha.mp3"
+    },
+    {
+      "id": "raitzarasi",
+      "title": "Rait Zara Si",
+      "file": "RaitZaraSi.mp3"
+    },
+    {
+      "id": "saans",
+      "title": "Saans",
+      "file": "Saans.mp3"
+    },
+    {
+      "id": "sawanaayahai",
+      "title": "Sawan Aaya Hai",
+      "file": "SawanAayaHai.mp3"
+    },
+    {
+      "id": "sunnrahahai",
+      "title": "Sunn Raha Hai",
+      "file": "SunnRahaHai.mp3"
+    },
+    {
+      "id": "terimeri",
+      "title": "Teri Meri",
+      "file": "TeriMeri.mp3"
+    },
+    {
+      "id": "tumjoaayejindagi",
+      "title": "Tum Jo Aaye Jindagi",
+      "file": "TumJoAayeJindagi.mp3"
+    },
+    {
+      "id": "tumkyamile",
+      "title": "Tum Kya Mile",
+      "file": "TumKyaMile.mp3"
+    },
+    {
+      "id": "tunemaarientriyaan",
+      "title": "Tune Maari Entriyaan",
+      "file": "TuneMaariEntriyaan.mp3"
+    },
+    {
+      "id": "vekamleya",
+      "title": "Ve Kamleya",
+      "file": "VeKamleya.mp3"
+    }
+  ]
+}

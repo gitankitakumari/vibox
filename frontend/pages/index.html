@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>VI-BOX | Music Player with Favorites</title>
+  
+<link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  
+</head>
+<body>
+<main>
+  <nav class="main-menu">
+    <div>
+      <div class="user-info">
+        <a href="#"><img src="../assets/images/LOGO.png" alt="VI-BOX Logo">
+        <p>VI-BOX</p>
+        <p>Created by</p>
+        <p>Ankita Kumari </p>
+      </div>
+          <ul>
+      <li class="nav-item"><a href="discover.html"><i class="fa fa-map nav-icon"></i><span class="nav-text">Discover</span></a></li>
+      <li class="nav-item"><a href="trending.html"><i class="fa fa-arrow-trend-up nav-icon"></i><span class="nav-text">Trending</span></a></li>
+      <li class="nav-item"><a href="playlist.html"><i class="fa fa-circle-play nav-icon"></i><span class="nav-text">Playlist</span></a></li>
+      <li class="nav-item"><a href="album.html"><i class="fa fa-compact-disc nav-icon"></i><span class="nav-text">Album</span></a></li>
+      <li class="nav-item"><a href="favorite.html"><i class="fa fa-heart nav-icon"></i><span class="nav-text">Favorites</span></a></li>
+    </ul>
+  </div>
+  <ul>
+    <li class="nav-item"><a href="settings.html"><i class="fa fa-cog nav-icon"></i><span class="nav-text">Settings</span></a></li>
+    <li class="nav-item"><a href="profile.html"><i class="fa fa-user nav-icon"></i><span class="nav-text">Profile</span></a></li>
+    <li class="nav-item"><a href="profile.html"><i class="fa fa-right-from-bracket nav-icon"></i><span class="nav-text">Logout</span></a></li>
+  </ul>
+  </nav>
+
+  <section class="content">
+    <div class="left-content">
+      <div class="slider-container">
+        <h1>VI-BOX Sunte Raho!</h1>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://picsum.photos/id/104/400/300" alt="mood"/><div class="slide-overlay"><h2>Midnight Vibes</h2><button>Listen Now <i class="fa-solid fa-circle-play"></i></button></div></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/id/169/400/300" alt="party"/><div class="slide-overlay"><h2>Party Beats</h2><button>Listen Now <i class="fa-solid fa-circle-play"></i></button></div></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/id/155/400/300" alt="relax"/><div class="slide-overlay"><h2>Relaxing Melody</h2><button>Listen Now <i class="fa-solid fa-circle-play"></i></button></div></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/id/96/400/300" alt="jazz"/><div class="slide-overlay"><h2>Smooth Jazz</h2><button>Listen Now <i class="fa-solid fa-circle-play"></i></button></div></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="artists">
+        <h1>Featured Artists</h1>
+        <div class="artist-container containers">
+          <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqAk9PbqVCBeFeRD6Lb_KbL-c5K2VDhcHR1PsLGAjeBVBSMXan-ihzSXKs2UUeqOv_2DZdsTuSlPW2s1p8YQfJno4f8BmSyQyTKQ0j2hU&s=10" alt=""/><p>Arijit Singh</p></div>
+          <div class="artist"><img src="https://i.scdn.co/image/ab67616d0000b273f63c2463847a716b55139e96" alt=""/><p>Yo Yo Honey Singh</p></div>
+          <div class="artist"><img src="https://www.allaboutmusic.in/wp-content/uploads/2025/08/Shreya-Ghoshal.webp" alt=""/><p>Shreya Ghoshal</p></div>
+          <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtm-8Y2rIdUkXHq0CScWTe5woupTVdRlD9w&s" alt=""/><p>Atif Aslam</p></div>
+          <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVYsAW366fkoz-QghrpZNqdM_TPjo6ZCS9w&s" alt=""/><p>Jubin Nautiyal</p></div>
+          <div class="artist"><img src="https://a10.gaanacdn.com/gn_img/artists/DwPKOBbqVZ/DwPKOBbqVZ/size_m_1716815773.jpg" alt=""/><p>Alka Yagnik</p></div>
+          <div class="artist"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/AR_Rahman_At_The_%E2%80%98Marvel_Anthem%E2%80%99_Launch_%283x4_cropped%29.jpg/250px-AR_Rahman_At_The_%E2%80%98Marvel_Anthem%E2%80%99_Launch_%283x4_cropped%29.jpg" alt=""/><p>A R Rahman</p></div>
+          <div class="artist"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuaPp8q9b9JEKwCskFDdXsWrXcTplZF6PhHQ&s" alt=""/><p>KK</p></div>
+        </div>
+      </div>
+
+      <div class="albums">
+        <h1>Recommended Albums</h1>
+        <div class="album-container containers">
+          <div class="album"><img src="https://picsum.photos/id/20/140/140" alt=""/><div><h2>Views</h2><p>Drake</p></div></div>
+          <div class="album"><img src="https://picsum.photos/id/30/140/140" alt=""/><div><h2>Speak Now</h2><p>Taylor Swift</p></div></div>
+          <div class="album"><img src="https://picsum.photos/id/42/140/140" alt=""/><div><h2>Born to Die</h2><p>Lana Del Rey</p></div></div>
+          <div class="album"><img src="https://picsum.photos/id/26/140/140" alt=""/><div><h2>Endless Summer</h2><p>Miley Cyrus</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-content">
+      <div class="recommended-songs">
+        <h1><i class="fas fa-music"></i> All Songs <span style="font-size:0.8rem;">❤️ Click heart to add to favorites</span></h1>
+        <div class="song-container" id="dynamicSongList"></div>
+      </div>
+      <div class="music-player">
+        <div class="album-cover">
+          <img src="https://placehold.co/300/2d2f45/white?text=🎵" id="rotatingImage" alt="cover" />
+          <span class="point"></span>
+        </div>
+        <h2 id="currentSongTitle">Select a song</h2>
+        <p id="currentArtist">VI-BOX library</p>
+        <audio id="song" preload="metadata"></audio>
+        <input type="range" value="0" id="progress" step="0.01">
+        <div class="controls">
+        <button id="prevBtn" class="backward"><i class="fa-solid fa-backward"></i></button>
+<button id="playBtn" class="play-pause-btn"><i class="fa-solid fa-play" id="controlIcon"></i></button>
+<button id="nextBtn" class="forward"><i class="fa-solid fa-forward"></i></button> 
+<button class="fav-btn" data-id="${song.id}"> 🤍</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>

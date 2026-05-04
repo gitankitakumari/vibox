@@ -1,0 +1,11 @@
+{
+  "artist": "Subh",
+  "image": "/assets/artists/subh.jpg",
+  "songs": [
+    {
+      "id": "onelove",
+      "title": "onelove",
+      "file": "onelove.mp3"
+    }
+  ]
+}

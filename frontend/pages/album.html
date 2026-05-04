@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums | VI-BOX</title>
+
+    <link rel="stylesheet" href="../css/album.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="albums-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h1>VI-BOX</h1>
+            </div>
+           <nav class="main-nav">
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+        <li><a href="discover.html"><i class="fas fa-compass"></i><span>Discover</span></a></li>
+        <li><a href="trending.html"><i class="fas fa-chart-line"></i><span>Trending</span></a></li>
+        <li class="active"><a href="album.html"><i class="fas fa-compact-disc"></i><span>Albums</span></a></li>
+        <li><a href="playlist.html"><i class="fas fa-list"></i><span>Playlists</span></a></li>
+        <li><a href="favorite.html"><i class="fas fa-heart"></i><span>Favorites</span></a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+    </ul>
+</nav>
+            <div class="user-stats">
+                <h3>Your Library</h3>
+                <div class="stats-grid">
+                    <div class="stat-item"><i class="fas fa-compact-disc"></i><div><h4 id="totalAlbums">0</h4><p>Albums</p></div></div>
+                    <div class="stat-item"><i class="fas fa-music"></i><div><h4 id="totalSongs">0</h4><p>Songs in Albums</p></div></div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://picsum.photos/40/40?random=1" alt="User">
+                    <div class="user-info">
+                        <h4>VI-BOX User</h4>
+                        <p>Music Lover</p>
+                    </div>
+                </div>
+                <button class="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Home View -->
+            <div id="homeView">
+                <header class="albums-header">
+                    <div class="header-content">
+                        <h1><i class="fas fa-compact-disc"></i> Albums</h1>
+                        <p>Create and manage your album collection</p>
+                    </div>
+                    <div class="header-actions">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search albums...">
+                        </div>
+                        <button class="create-album-btn" onclick="openCreateModal()"><i class="fas fa-plus"></i> Create Album</button>
+                    </div>
+                </header>
+
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Albums</button>
+                    <button class="filter-tab" data-filter="recent">Recently Added</button>
+                    <button class="filter-tab" data-filter="az">A-Z</button>
+                </div>
+
+                <div class="sort-options">
+                    <div class="sort-group">
+                        <span>Sort by:</span>
+                        <select id="sortSelect">
+                            <option value="recent">Recently Added</option>
+                            <option value="az">Alphabetical</option>
+                            <option value="songs">Most Songs</option>
+                        </select>
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th-large"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+
+                <div id="albumsContainer"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+
+            <!-- Album Detail View -->
+            <div id="detailView" class="hidden">
+                <button class="create-album-btn" onclick="backToHome()" style="margin-bottom: 1rem; background:#2d334b;">
+                    <i class="fas fa-arrow-left"></i> Back to All Albums
+                </button>
+                <div class="album-detail-view" id="albumDetailView"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create/Edit Album Modal -->
+    <div class="modal-overlay" id="albumModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Create New Album</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Album Name</label>
+                    <input type="text" id="albumName" placeholder="Enter album name">
+                </div>
+                <div class="form-group">
+                    <label>Artist</label>
+                    <input type="text" id="albumArtist" placeholder="Artist name">
+                </div>
+                <div class="form-group">
+                    <label>Year</label>
+                    <input type="text" id="albumYear" placeholder="2024">
+                </div>
+                <div class="form-group">
+                    <label>Cover Image URL</label>
+                    <input type="text" id="albumCover" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>Select Songs for this Album</label>
+                    <div class="songs-list-container" id="songChecklist"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                <button class="create-btn" id="saveAlbumBtn" onclick="saveAlbum()">Create Album</button>
+            </div>
+        </div>
+    </div>
+<script src="../js/album.js"></script>
+</body>
+
+</html>

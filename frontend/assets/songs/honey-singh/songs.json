@@ -1,0 +1,106 @@
+{
+  "artist": "Honey Singh",
+  "image": "/assets/artists/honey-singh.jpg",
+  "songs": [
+    {
+      "id": "6am",
+      "title": "6am",
+      "file": "6am.mp3"
+    },
+    {
+      "id": "accounts",
+      "title": "Accounts",
+      "file": "Accounts.mp3"
+    },
+    {
+      "id": "angreji",
+      "title": "Angreji",
+      "file": "Angreji.mp3"
+    },
+    {
+      "id": "angrejibeat",
+      "title": "Angrejibeat",
+      "file": "Angrejibeat.mp3"
+    },
+    {
+      "id": "ankhon",
+      "title": "Ankhon",
+      "file": "Ankhon.mp3"
+    },
+    {
+      "id": "birthdaybashdilliwaalizaalimgirlfriend128kbps",
+      "title": "Birthday Bash Dilliwaali Zaalim Girlfriend128Kbps",
+      "file": "BirthdayBashDilliwaaliZaalimGirlfriend128Kbps.mp3"
+    },
+    {
+      "id": "bluee",
+      "title": "Bluee",
+      "file": "Bluee.mp3"
+    },
+    {
+      "id": "bringmeback",
+      "title": "Bring Me Back",
+      "file": "BringMeBack.mp3"
+    },
+    {
+      "id": "brownrang",
+      "title": "Brownrang",
+      "file": "Brownrang.mp3"
+    },
+    {
+      "id": "brownranginternationalvillager128kbps",
+      "title": "Brown Rang International Villager128Kbps",
+      "file": "BrownRangInternationalVillager128Kbps.mp3"
+    },
+    {
+      "id": "dheeredheereyoyohoneysingh128kbps",
+      "title": "Dheere Dheere Yo Yo Honey Singh128Kbps",
+      "file": "DheereDheereYoYoHoneySingh128Kbps.mp3"
+    },
+    {
+      "id": "dilchorisonuketitukisweety128kbps",
+      "title": "Dil Chori Sonu Ke Titu Ki Sweety128Kbps",
+      "file": "DilChoriSonuKeTituKiSweety128Kbps.mp3"
+    },
+    {
+      "id": "dopeshop",
+      "title": "Dopeshop",
+      "file": "Dopeshop.mp3"
+    },
+    {
+      "id": "dopeshopeinternationalvillager128kbps",
+      "title": "Dope Shope International Villager128Kbps",
+      "file": "DopeShopeInternationalVillager128Kbps.mp3"
+    },
+    {
+      "id": "honey",
+      "title": "honey",
+      "file": "honey.mp3"
+    },
+    {
+      "id": "lovedosedesikalakaar128kbps",
+      "title": "Love Dose Desi Kalakaar128Kbps",
+      "file": "LoveDoseDesiKalakaar128Kbps.mp3"
+    },
+    {
+      "id": "lungidance6",
+      "title": "Lungi Dance6",
+      "file": "LungiDance6.mp3"
+    },
+    {
+      "id": "millionaireglory128kbps",
+      "title": "Millionaire Glory128Kbps",
+      "file": "MillionaireGlory128Kbps.mp3"
+    },
+    {
+      "id": "partyall",
+      "title": "Partyall",
+      "file": "Partyall.mp3"
+    },
+    {
+      "id": "urvashi",
+      "title": "Urvashi",
+      "file": "Urvashi.mp3"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "artist": "Ar Rahman",
+  "image": "/assets/artists/ar-rahman.jpg",
+  "songs": [
+    {
+      "id": "bombay",
+      "title": "Bombay",
+      "file": "Bombay.mp3"
+    },
+    {
+      "id": "chaiyyachaiyya",
+      "title": "Chaiyya Chaiyya",
+      "file": "ChaiyyaChaiyya.mp3"
+    },
+    {
+      "id": "chhotisiaasha",
+      "title": "Chhoti Si Aasha",
+      "file": "ChhotiSiAasha.mp3"
+    },
+    {
+      "id": "ennasona",
+      "title": "Enna Sona",
+      "file": "EnnaSona.mp3"
+    },
+    {
+      "id": "ghananghanan",
+      "title": "Ghanan Ghanan",
+      "file": "GhananGhanan.mp3"
+    },
+    {
+      "id": "jaiho",
+      "title": "Jai Ho",
+      "file": "JaiHo.mp3"
+    },
+    {
+      "id": "kalhonaaho",
+      "title": "Kal Ho Naa Ho",
+      "file": "KalHoNaaHo.mp3"
+    },
+    {
+      "id": "kehna",
+      "title": "Kehna",
+      "file": "Kehna.mp3"
+    },
+    {
+      "id": "kunfayakun",
+      "title": "Kun Faya Kun",
+      "file": "KunFayaKun.mp3"
+    },
+    {
+      "id": "lukachuppi",
+      "title": "Luka Chuppi",
+      "file": "LukaChuppi.mp3"
+    },
+    {
+      "id": "maahive",
+      "title": "Maahi Ve",
+      "file": "MaahiVe.mp3"
+    },
+    {
+      "id": "maulawasallim",
+      "title": "Maula Wa Sallim",
+      "file": "MaulaWaSallim.mp3"
+    },
+    {
+      "id": "mitwa-12",
+      "title": "Mitwa",
+      "file": "Mitwa(2).mp3"
+    },
+    {
+      "id": "mitwa",
+      "title": "Mitwa",
+      "file": "Mitwa.mp3"
+    },
+    {
+      "id": "nadaanparinde",
+      "title": "Nadaan Parinde",
+      "file": "NadaanParinde.mp3"
+    },
+    {
+      "id": "oreychhori",
+      "title": "ORey Chhori",
+      "file": "OReyChhori.mp3"
+    },
+    {
+      "id": "phirseudchala",
+      "title": "Phir Se Ud Chala",
+      "file": "PhirSeUdChala.mp3"
+    },
+    {
+      "id": "prettywomen-kalhonaho",
+      "title": "Pretty Women-Kal Ho Na Ho",
+      "file": "PrettyWomen-KalHoNaHo.mp3"
+    },
+    {
+      "id": "radhaak",
+      "title": "Radhaa K",
+      "file": "RadhaaK.mp3"
+    },
+    {
+      "id": "rangdebasanti",
+      "title": "Rang De Basanti",
+      "file": "RangDeBasanti.mp3"
+    },
+    {
+      "id": "roja",
+      "title": "Roja",
+      "file": "Roja.mp3"
+    },
+    {
+      "id": "saddahaq",
+      "title": "Sadda Haq",
+      "file": "SaddaHaq.mp3"
+    },
+    {
+      "id": "taal",
+      "title": "Taal",
+      "file": "Taal.mp3"
+    },
+    {
+      "id": "thehummasong",
+      "title": "The Humma Song",
+      "file": "TheHummaSong.mp3"
+    },
+    {
+      "id": "tuhire",
+      "title": "Tu Hi Re",
+      "file": "TuHiRe.mp3"
+    },
+    {
+      "id": "tumho",
+      "title": "Tum Ho",
+      "file": "TumHo.mp3"
+    },
+    {
+      "id": "vande",
+      "title": "Vande",
+      "file": "Vande.mp3"
+    },
+    {
+      "id": "yehjodeshaitera",
+      "title": "YEHJODESHAITERA",
+      "file": "YEHJODESHAITERA.mp3"
+    },
+    {
+      "id": "yunhichala",
+      "title": "Yun Hi Chala",
+      "file": "YunHiChala.mp3"
+    },
+    {
+      "id": "zariya",
+      "title": "Zariya",
+      "file": "Zariya.mp3"
+    }
+  ]
+}

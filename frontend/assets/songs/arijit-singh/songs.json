@@ -1,0 +1,211 @@
+{
+  "artist": "Arijit Singh",
+  "image": "/assets/artists/arijit-singh.jpg",
+  "songs": [
+    {
+      "id": "aabaad",
+      "title": "Aabaad",
+      "file": "Aabaad.mp3"
+    },
+    {
+      "id": "aajzid",
+      "title": "aajzid",
+      "file": "aajzid.mp3"
+    },
+    {
+      "id": "aasan",
+      "title": "Aasan",
+      "file": "Aasan.mp3"
+    },
+    {
+      "id": "aayat",
+      "title": "Aayat",
+      "file": "Aayat.mp3"
+    },
+    {
+      "id": "acat",
+      "title": "Acat",
+      "file": "Acat.mp3"
+    },
+    {
+      "id": "aedil",
+      "title": "Aedil",
+      "file": "Aedil.mp3"
+    },
+    {
+      "id": "agar",
+      "title": "Agar",
+      "file": "Agar.mp3"
+    },
+    {
+      "id": "ami",
+      "title": "Ami",
+      "file": "Ami.mp3"
+    },
+    {
+      "id": "apna",
+      "title": "Apna",
+      "file": "Apna.mp3"
+    },
+    {
+      "id": "baatein",
+      "title": "Baatein",
+      "file": "Baatein.mp3"
+    },
+    {
+      "id": "bairiyaarijitsingh128kbps",
+      "title": "Bairiya Arijit Singh128Kbps",
+      "file": "BairiyaArijitSingh128Kbps.mp3"
+    },
+    {
+      "id": "bekh",
+      "title": "Bekh",
+      "file": "Bekh.mp3"
+    },
+    {
+      "id": "bolna",
+      "title": "Bolna",
+      "file": "Bolna.mp3"
+    },
+    {
+      "id": "channa",
+      "title": "Channa",
+      "file": "Channa.mp3"
+    },
+    {
+      "id": "deva",
+      "title": "Deva",
+      "file": "Deva.mp3"
+    },
+    {
+      "id": "dooron",
+      "title": "Dooron",
+      "file": "Dooron.mp3"
+    },
+    {
+      "id": "enna",
+      "title": "Enna",
+      "file": "Enna.mp3"
+    },
+    {
+      "id": "galtisemistakejaggajasoos128kbps",
+      "title": "Galti Se Mistake Jagga Jasoos128Kbps",
+      "file": "GaltiSeMistakeJaggaJasoos128Kbps.mp3"
+    },
+    {
+      "id": "gehrahuadhurandhar128kbps",
+      "title": "Gehra Hua Dhurandhar128Kbps",
+      "file": "GehraHuaDhurandhar128Kbps.mp3"
+    },
+    {
+      "id": "gerua",
+      "title": "gerua",
+      "file": "gerua.mp3"
+    },
+    {
+      "id": "ghun",
+      "title": "Ghun",
+      "file": "Ghun.mp3"
+    },
+    {
+      "id": "hamari",
+      "title": "Hamari",
+      "file": "Hamari.mp3"
+    },
+    {
+      "id": "hawa",
+      "title": "Hawa",
+      "file": "Hawa.mp3"
+    },
+    {
+      "id": "highheels",
+      "title": "High Heels",
+      "file": "HighHeels.mp3"
+    },
+    {
+      "id": "iilahi",
+      "title": "iilahi",
+      "file": "iilahi.mp3"
+    },
+    {
+      "id": "janam",
+      "title": "Janam",
+      "file": "Janam.mp3"
+    },
+    {
+      "id": "kabira",
+      "title": "Kabira",
+      "file": "Kabira.mp3"
+    },
+    {
+      "id": "kesh",
+      "title": "kesh",
+      "file": "kesh.mp3"
+    },
+    {
+      "id": "khair",
+      "title": "khair",
+      "file": "khair.mp3"
+    },
+    {
+      "id": "khamoshiyanjeetgannguli128kbps",
+      "title": "Khamoshiyan Jeet Gannguli128Kbps",
+      "file": "KhamoshiyanJeetGannguli128Kbps.mp3"
+    },
+    {
+      "id": "merey",
+      "title": "merey",
+      "file": "merey.mp3"
+    },
+    {
+      "id": "meriaashiquiaashiqui2128kbps",
+      "title": "Meri Aashiqui Aashiqui2128Kbps",
+      "file": "MeriAashiquiAashiqui2128Kbps.mp3"
+    },
+    {
+      "id": "pal",
+      "title": "pal",
+      "file": "pal.mp3"
+    },
+    {
+      "id": "raabta",
+      "title": "Raabta",
+      "file": "Raabta.mp3"
+    },
+    {
+      "id": "roke",
+      "title": "Roke",
+      "file": "Roke.mp3"
+    },
+    {
+      "id": "sajni",
+      "title": "sajni",
+      "file": "sajni.mp3"
+    },
+    {
+      "id": "shay",
+      "title": "Shay",
+      "file": "Shay.mp3"
+    },
+    {
+      "id": "sitaareikkis128kbps",
+      "title": "Sitaare Ikkis128Kbps",
+      "file": "SitaareIkkis128Kbps.mp3"
+    },
+    {
+      "id": "tum",
+      "title": "Tum",
+      "file": "Tum.mp3"
+    },
+    {
+      "id": "uska",
+      "title": "Uska",
+      "file": "Uska.mp3"
+    },
+    {
+      "id": "zalima",
+      "title": "Zalima",
+      "file": "Zalima.mp3"
+    }
+  ]
+}

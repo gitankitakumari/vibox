@@ -1,0 +1,96 @@
+{
+  "artist": "Atif Aslam",
+  "image": "/assets/artists/atif-aslam.jpg",
+  "songs": [
+    {
+      "id": "bakhudatumhiho",
+      "title": "Bakhuda Tumhi Ho",
+      "file": "BakhudaTumhiHo.mp3"
+    },
+    {
+      "id": "beintehaan",
+      "title": "Be Intehaan",
+      "file": "BeIntehaan.mp3"
+    },
+    {
+      "id": "darasal",
+      "title": "Darasal",
+      "file": "Darasal.mp3"
+    },
+    {
+      "id": "dekhtedekhte",
+      "title": "Dekhte Dekhte",
+      "file": "DekhteDekhte.mp3"
+    },
+    {
+      "id": "dilmerinasune",
+      "title": "Dil Meri Na Sune",
+      "file": "DilMeriNaSune.mp3"
+    },
+    {
+      "id": "kaditehasbol",
+      "title": "Kadi Te Has Bol",
+      "file": "KadiTeHasBol.mp3"
+    },
+    {
+      "id": "mainrangsharbatonka",
+      "title": "Main Rang Sharbaton Ka",
+      "file": "MainRangSharbatonKa.mp3"
+    },
+    {
+      "id": "merikahani",
+      "title": "Meri Kahani",
+      "file": "MeriKahani.mp3"
+    },
+    {
+      "id": "muskurane",
+      "title": "Muskurane",
+      "file": "Muskurane.mp3"
+    },
+    {
+      "id": "osaathi",
+      "title": "OSaathi",
+      "file": "OSaathi.mp3"
+    },
+    {
+      "id": "sunona",
+      "title": "Suno Na",
+      "file": "SunoNa.mp3"
+    },
+    {
+      "id": "tajdareharam",
+      "title": "Tajdar EHaram",
+      "file": "TajdarEHaram.mp3"
+    },
+    {
+      "id": "tereliye",
+      "title": "Tere Liye",
+      "file": "TereLiye.mp3"
+    },
+    {
+      "id": "teresangyaara",
+      "title": "Tere Sang Yaara",
+      "file": "TereSangYaara.mp3"
+    },
+    {
+      "id": "teribaatonmeinaisauljhajiyatitlesong-teribaatonmeinaisauljhajiya-128kbps-",
+      "title": "Teri Baaton Mein Aisa Uljha Jiya Title Song-Teri Baaton Mein Aisa Uljha Jiya(128kbps)",
+      "file": "TeriBaatonMeinAisaUljhaJiyaTitleSong-TeriBaatonMeinAisaUljhaJiya(128kbps).mp3"
+    },
+    {
+      "id": "tujaanena",
+      "title": "Tu Jaane Na",
+      "file": "TuJaaneNa.mp3"
+    },
+    {
+      "id": "tumhiho",
+      "title": "Tum Hi Ho",
+      "file": "TumHiHo.mp3"
+    },
+    {
+      "id": "wohlamhe",
+      "title": "Woh Lamhe",
+      "file": "WohLamhe.mp3"
+    }
+  ]
+}

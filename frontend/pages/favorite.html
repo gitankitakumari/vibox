@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VI-BOX | My Favorites</title>
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/favorite.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 🔥 HEADER -->
+  <div class="section-header">
+    <div class="header-content">
+      <h1><i class="fas fa-heart"></i> My Favorites</h1>
+      <p class="subtitle">
+        ❤️ Click heart icon to save songs | All your loved music in one place
+      </p>
+    </div>
+  </div>
+
+  <!-- 🔍 SEARCH + FILTER -->
+  <div class="search-filter-section">
+
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input 
+        type="text" 
+        class="search-input" 
+        id="searchInput" 
+        placeholder="Search songs..."
+      >
+    </div>
+
+    <div class="sort-filter">
+      <button class="filter-btn active" data-sort="recent">
+        <i class="fas fa-clock"></i> Recent
+      </button>
+
+      <button class="filter-btn" data-sort="az">
+        <i class="fas fa-sort-alpha-down"></i> A-Z
+      </button>
+    </div>
+
+  </div>
+
+  </div>
+    <!-- 🔁 TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="liked">
+      ❤️ Liked Songs
+    </button>
+
+    <button class="tab-btn" data-tab="all">
+      📚 All Songs
+    </button>
+  </div>
+
+
+
+  <!-- ❤️ LIKED SONGS -->
+  <div id="likedSongsTab" class="liked-songs-section">
+
+    <div class="subsection-header">
+      <h2><i class="fas fa-thumbs-up"></i> Liked Songs</h2>
+
+      <button id="playAllBtn" class="play-all-btn">
+        <i class="fas fa-play"></i> Play All
+      </button>
+    </div>
+
+    <div id="songsTableContainer" class="table-container"></div>
+
+    <div id="pagination" class="pagination"></div>
+
+  </div>
+
+  <!-- 📚 ALL SONGS -->
+  <div id="allSongsTab" class="all-songs-library hidden">
+
+    <div class="library-header">
+      <h3><i class="fas fa-database"></i> All Songs Library</h3>
+      <p style="font-size: 0.8rem; color: #8b94b5; margin-top: 0.5rem;">
+        Click ❤️ to add to favorites
+      </p>
+    </div>
+
+    <div id="allSongsTableContainer" class="table-container"></div>
+
+    <div id="allSongsPagination" class="pagination"></div>
+
+  </div>
+
+</div>
+<!-- 🎧 NOW PLAYING BAR -->
+<div id="nowPlayingBar" class="now-playing hidden">
+  <img id="npCover" src="" />
+
+  <div class="np-info">
+    <h4 id="npTitle">No song</h4>
+    <p id="npArtist">---</p>
+  </div>
+
+  <button id="npPlayBtn">▶</button>
+</div>
+
+<!-- 🔥 JS -->
+<script src="../js/favorite.js"></script>
+
+</body>
+</html>

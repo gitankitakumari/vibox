@@ -1,0 +1,482 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --bg-main: #0a0c12;
+  --bg-card: #0f121c;
+  --border: #2a2f48;
+
+  --primary: #7c3aed;
+  --accent: #ff416c;
+  --success: #10b981;
+
+  --text-main: #ededf2;
+  --text-muted: #8b94b5;
+
+  --transition: 0.2s ease;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--bg-main), #10131c);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ===== HEADER ===== */
+.section-header {
+  margin-bottom: 10px;
+}
+
+.search-filter-section {
+  margin-bottom: 20px;
+}
+.header-content h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* ===== SEARCH ===== */
+/* 🔥 PREMIUM SEARCH BAR */
+.search-container {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px 15px 50px;
+  border-radius: 40px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124,58,237,0.25);
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+/* placeholder */
+.search-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* focus effect */
+.search-input:focus {
+  outline: none;
+  border: 1px solid #a855f7;
+  box-shadow:
+    0 0 10px rgba(168,85,247,0.6),
+    0 0 30px rgba(168,85,247,0.2);
+  transform: scale(1.02);
+}
+
+/* icon */
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a855f7;
+  font-size: 16px;
+  pointer-events: none;
+}
+/* ===== BUTTONS ===== */
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn {
+  background: #1a1e2c;
+  border: 1px solid var(--border);
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  color: #cdd1e8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.filter-btn:hover {
+  background: #2d334b;
+}
+
+/* ===== CATEGORY ===== */
+.favorites-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124,58,237,0.2);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: #a855f7;
+  box-shadow: 0 10px 30px rgba(124,58,237,0.2);
+}
+
+.category-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(124, 58, 237, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.category-info .count {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  padding: 0.8rem 1.5rem;
+  color: var(--text-muted);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+}
+
+.liked-songs-section,
+.all-songs-library {
+  composes: card;
+}
+
+/* ===== TABLE ===== */
+.songs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.songs-table th,
+.songs-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #1e2335;
+}
+.songs-table tr {
+  transition: 0.3s;
+}
+
+.songs-table tr:hover {
+  background: rgba(124,58,237,0.15);
+  transform: scale(1.01);
+}
+.song-row.playing {
+  box-shadow: 0 0 20px #7c3aed55;
+}
+
+/* ===== SONG INFO ===== */
+.song-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.song-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.song-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.play-btn {
+  background: linear-gradient(45deg, #7c3aed, #a855f7);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.play-btn:hover {
+  color: var(--primary);
+}
+
+.like-btn:hover {
+  color: var(--success);
+}
+
+.like-btn.liked {
+  color: var(--accent);
+}
+
+.unlike-btn:hover {
+  color: var(--accent);
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.page-btn {
+  background: #1a1e2c;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* ===== EMPTY ===== */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--success);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+}
+/* 🌌 Glass effect container */
+.container {
+  padding: 30px;
+}
+
+/* 🔍 Search */
+.search-input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: white;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 10px #7c3aed44;
+}
+
+/* 🎵 Table */
+.songs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.songs-table tr {
+  transition: 0.3s;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.songs-table tr:hover {
+  background: rgba(124,58,237,0.1);
+  transform: scale(1.01);
+}
+
+/* ▶ Play button */
+.play-btn {
+  background: #7c3aed;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ❤️ Heart */
+.like-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  transform: scale(1.3);
+}
+
+/* 🔘 Tabs */
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: linear-gradient(45deg, #7c3aed, #a855f7);
+}
+
+/* ▶ Play All */
+.play-all-btn {
+  background: linear-gradient(45deg, #7c3aed, #a855f7);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+/* smooth scroll feel */
+body {
+  scroll-behavior: smooth;
+}
+
+/* buttons */
+button {
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+/* 🎧 NOW PLAYING BAR */
+.now-playing {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 12px 16px;
+  border-radius: 20px;
+
+  background: rgba(20, 20, 35, 0.8);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(124,58,237,0.3);
+  box-shadow: 0 0 25px rgba(124,58,237,0.4);
+
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.now-playing.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.now-playing img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.np-info h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.np-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+#npPlayBtn {
+  margin-left: auto;
+  background: #7c3aed;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 12px;
+  cursor: pointer;
+}

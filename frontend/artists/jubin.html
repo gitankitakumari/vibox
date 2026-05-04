@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>VI-BOX | Jubin Nautiyal - The Soulful Voice</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Swiper JS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #0a0a1a 0%, #12122e 100%);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    main {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .main-menu {
+      width: 280px;
+      background: rgba(8, 8, 16, 0.9);
+      backdrop-filter: blur(12px);
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem 0 2rem 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      z-index: 20;
+    }
+
+    .user-info {
+      text-align: center;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .user-info img {
+      width: 70px;
+      border-radius: 30px;
+      margin-bottom: 12px;
+      background: #2a2f3f;
+      padding: 6px;
+    }
+
+    .user-info p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #ccc;
+    }
+
+    .user-info p:first-of-type {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 8px 0 4px;
+    }
+
+    .main-menu ul {
+      list-style: none;
+      padding: 0 1rem;
+    }
+
+    .nav-item {
+      margin: 8px 0;
+      border-radius: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #cfd4e6;
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 16px;
+      transition: 0.2s;
+    }
+
+    .nav-item i {
+      width: 24px;
+      font-size: 1.2rem;
+    }
+
+    .nav-item.active {
+      background: rgba(249, 115, 22, 0.25);
+      border-left: 3px solid #f97316;
+    }
+
+    .nav-item.active a {
+      color: white;
+    }
+
+    .nav-item:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      flex: 1;
+      display: flex;
+      gap: 28px;
+      padding: 28px 36px 28px 28px;
+      overflow-y: auto;
+    }
+
+    .left-content {
+      flex: 2.2;
+      min-width: 0;
+    }
+
+    .right-content {
+      flex: 1.2;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Artist Hero Section - Jubin Theme */
+    .artist-hero {
+      background: linear-gradient(135deg, #2a1a0a, #0a0a1a);
+      border-radius: 36px;
+      padding: 28px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      border: 1px solid rgba(249,115,22,0.3);
+    }
+
+    .artist-avatar img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #f97316;
+      box-shadow: 0 0 25px rgba(249,115,22,0.5);
+    }
+
+    .artist-bio h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, #fff, #fb923c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .artist-bio p {
+      color: #fed7aa;
+      max-width: 450px;
+      line-height: 1.5;
+    }
+
+    .song-count-badge {
+      background: #ea580c;
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      margin-top: 12px;
+    }
+
+    .random-badge {
+      background: #f97316;
+      padding: 4px 10px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Swiper */
+    .popular-swiper {
+      margin: 30px 0;
+    }
+
+    .popular-swiper h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .swiper {
+      width: 100%;
+      padding: 20px 0 40px;
+    }
+
+    .swiper-slide {
+      width: 220px;
+      background: #161632;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .slide-info {
+      padding: 14px;
+    }
+
+    .slide-info h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .slide-info p {
+      font-size: 0.75rem;
+      color: #fb923c;
+    }
+
+    /* All Songs Grid */
+    .all-songs-section h2 {
+      font-size: 1.6rem;
+      margin: 28px 0 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .songs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      max-height: 450px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .song-card {
+      background: #12122e;
+      border-radius: 20px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .song-card:hover {
+      background: #2a1a15;
+      transform: scale(1.01);
+      border-color: #f97316;
+    }
+
+    .song-card-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .song-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .song-card-info {
+      flex: 1;
+    }
+
+    .song-card-info h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .song-card-info p {
+      font-size: 0.7rem;
+      color: #fb923c;
+    }
+
+    .play-icon-small {
+      color: #f97316;
+      font-size: 1.2rem;
+    }
+
+    /* Music Player */
+    .music-player {
+      background: rgba(18, 18, 30, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 44px;
+      padding: 24px 20px 28px;
+      text-align: center;
+      box-shadow: 0 20px 35px -12px black;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .album-cover {
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    .album-cover img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .point {
+      position: absolute;
+      bottom: 5px;
+      right: 15px;
+      width: 18px;
+      height: 18px;
+      background: #f97316;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .music-player h2 {
+      font-size: 1.3rem;
+      margin-top: 8px;
+    }
+
+    .music-player p {
+      color: #fb923c;
+      margin-bottom: 18px;
+    }
+
+    #progress {
+      width: 100%;
+      height: 5px;
+      border-radius: 10px;
+      background: #2f3348;
+      -webkit-appearance: none;
+      margin: 12px 0;
+    }
+
+    #progress::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      background: #f97316;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 12px;
+    }
+
+    .controls button {
+      background: #2a2f45;
+      border: none;
+      width: 54px;
+      height: 54px;
+      border-radius: 60px;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: 0.1s;
+    }
+
+    .controls button.play-pause-btn {
+      background: #ea580c;
+      width: 64px;
+      height: 64px;
+      font-size: 1.8rem;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1e1f2c;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #f97316;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        flex-direction: column;
+      }
+      .main-menu {
+        width: 100px;
+      }
+      .nav-text {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <nav class="main-menu">
+    <div>
+      <div class="user-info">
+        <a href="index.html"><img src="LOGO.png" alt="logo" /></a>
+        <p>VI-BOX</p>
+        <p>Jubin Nautiyal Special</p>
+      </div>
+      <ul>
+        <li class="nav-item"><a href="#"><i class="fa fa-microphone-alt"></i><span class="nav-text">Jubin Hub</span></a></li>
+        <li class="nav-item active"><a href="#"><i class="fa fa-headphones"></i><span class="nav-text">Devotional Hits</span></a></li>
+        <li class="nav-item"><a href="#"><i class="fa fa-heart"></i><span class="nav-text">Fan Favorites</span></a></li>
+      </ul>
+    </div>
+    <ul>
+      <li class="nav-item"><a href="#"><i class="fa fa-user"></i><span class="nav-text">Profile</span></a></li>
+      <li class="nav-item"><a href="#"><i class="fa fa-right-from-bracket"></i><span class="nav-text">Logout</span></a></li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <div class="left-content">
+      <!-- Artist Hero -->
+      <div class="artist-hero">
+        <div class="artist-avatar">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVYsAW366fkoz-QghrpZNqdM_TPjo6ZCS9w&s" alt="Jubin Nautiyal">
+        </div>
+        <div class="artist-bio">
+          <h1><i class="fa-solid fa-music"></i> Jubin Nautiyal</h1>
+          <p>The voice that blends devotion with romance. From soulful bhajans to heartwarming love songs, Jubin's magical voice touches the soul of millions.</p>
+          <span class="song-count-badge"><i class="fa-regular fa-circle-play"></i> 32 Melodious Hits</span>
+          <span class="song-count-badge random-badge" style="margin-left: 10px;"><i class="fa-solid fa-shuffle"></i> Random Play Mode</span>
+        </div>
+      </div>
+
+      <!-- Popular Songs Swiper -->
+      <div class="popular-swiper">
+        <h2><i class="fa-solid fa-crown"></i> Most Streamed <span style="font-size: 0.9rem;">🙏</span></h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="popularSwiperWrapper"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Complete Jubin Nautiyal Discography -->
+      <div class="all-songs-section">
+        <h2><i class="fa-solid fa-list-ul"></i> All Jubin Nautiyal Classics <span class="random-badge"><i class="fa-solid fa-shuffle"></i> Random Queue</span></h2>
+        <div class="songs-grid" id="songsGridContainer"></div>
+      </div>
+    </div>
+
+    <div class="right-content">
+      <div class="music-player">
+        <div class="album-cover">
+          <img src="https://placehold.co/300/2d2f45/white?text=🎤" id="rotatingImage" alt="cover" />
+          <span class="point"></span>
+        </div>
+        <h2 id="currentSongTitle">Ram Aayenge</h2>
+        <p id="currentArtist">Jubin Nautiyal</p>
+        <audio id="song" preload="metadata"></audio>
+        <input type="range" value="0" id="progress" step="0.01">
+        <div class="controls">
+          <button class="backward" id="prevBtn"><i class="fa-solid fa-backward"></i></button>
+          <button class="play-pause-btn" id="playPauseBtn"><i class="fa-solid fa-play" id="controlIcon"></i></button>
+          <button class="forward" id="nextBtn"><i class="fa-solid fa-forward"></i></button>
+        </div>
+        <div style="margin-top: 14px;">
+          <button id="randomToggleBtn" style="background:#2a2f45; border:none; padding:8px 16px; border-radius:40px; color:white; cursor:pointer; font-size:0.8rem;"><i class="fa-solid fa-dice-d6"></i> Random Next: ON</button>
+        </div>
+      </div>
+      <div style="background: rgba(20, 22, 36, 0.5); border-radius: 28px; padding: 16px; text-align: center; font-size: 0.8rem;">
+        <i class="fa-regular fa-heart" style="color: #f97316;"></i> 32 soulful tracks • Divine experience
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // ========== JUBIN NAUTIYAL EXCLUSIVE 32 SONGS LIBRARY ==========
+  const jubinSongs = [
+    { title: "Ram Aayenge", movie: "Devotional", source: "Ram.mp3", cover: "https://picsum.photos/id/100/200/200" },
+    { title: "Tum Hi Aana", movie: "Marjaavaan", source: "TumHiAana.mp3", cover: "https://picsum.photos/id/101/200/200" },
+    { title: "Lut Gaye", movie: "Lut Gaye", source: "LutGaye.mp3", cover: "https://picsum.photos/id/102/200/200" },
+    { title: "Dil Galti Kar Baitha Hai", movie: "Dil Galti Kar Baitha Hai", source: "DilGaltiKarBaithaHai.mp3", cover: "https://picsum.photos/id/103/200/200" },
+    { title: "Meri Aashiqui", movie: "Meri Aashiqui", source: "MeriAashiqui.mp3", cover: "https://picsum.photos/id/104/200/200" },
+    { title: "Tujhe Kitna Chahne Lage", movie: "Kabir Singh", source: "TujheKitna.mp3", cover: "https://picsum.photos/id/105/200/200" },
+    { title: "Bewafa Tera Masoom Chehra", movie: "Bewafa", source: "BewafachehraMasoom.mp3", cover: "https://picsum.photos/id/106/200/200" },
+    { title: "Humnava Mere", movie: "Humnava Mere", source: "HumnavaMere.mp3", cover: "https://picsum.photos/id/107/200/200" },
+    { title: "Main Jis Din Bhulaa Du", movie: "Main Jis Din", source: "MainJisDinBhuladu.mp3", cover: "https://picsum.photos/id/108/200/200" },
+    
+    { title: "Tera Ban Jaunga", movie: "Kabir Singh", source: "TeraBanJaunga.mp3", cover: "https://picsum.photos/id/112/200/200" },
+   3
+    { title: "Pehli Dafa", movie: "Pehli Dafa", source: "PehliDafa.mp3", cover: "https://picsum.photos/id/114/200/200" },
+    { title: "Kaun Tujhe", movie: "M.S. Dhoni", source: "KaunTujhe.mp3", cover: "https://picsum.photos/id/115/200/200" },
+    { title: "Kinna Sona", movie: "Kinna Sona", source: "KinnaSona.mp3", cover: "https://picsum.photos/id/116/200/200" },
+    { title: "Tu Bhi Royega", movie: "Tu Bhi Royega", source: "TuBhiRoyega.mp3", cover: "https://picsum.photos/id/117/200/200" },
+    { title: "Nai Lagda", movie: "Nai Lagda", source: "NaiLagda.mp3", cover: "https://picsum.photos/id/118/200/200" },
+    
+    { title: "Bhula Dunga", movie: "Bhula Dunga", source: "NaiLagda.mp3", cover: "https://picsum.photos/id/120/200/200" },
+    
+    { title: "Mere Sohneya", movie: "Mere Sohneya", source: "MereSohneya.mp3", cover: "https://picsum.photos/id/122/200/200" },
+    
+    { title: "Dil Tod Ke", movie: "Dil Tod Ke", source: "DilTodKe.mp3", cover: "https://picsum.photos/id/124/200/200" },
+    { title: "Barsaat Ki Dhun", movie: "Barsaat", source: "BarsaatKiDhun.mp3", cover: "https://picsum.photos/id/125/200/200" },
+    { title: "Meri Zindagi Mein", movie: "Meri Zindagi", source: "MeriZindagi.mp3", cover: "https://picsum.photos/id/126/200/200" },
+    
+    { title: "Sanam Re", movie: "Sanam Re", source: "SanamRe.mp3", cover: "https://picsum.photos/id/128/200/200" },
+    
+  ];
+
+  // ----- RANDOM MODE LOGIC -----
+  let currentIndex = 0;
+  let randomMode = true;
+
+  const audio = document.getElementById("song");
+  const progressBar = document.getElementById("progress");
+  const controlIcon = document.getElementById("controlIcon");
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const rotatingImg = document.getElementById("rotatingImage");
+  const currentTitleSpan = document.getElementById("currentSongTitle");
+  const currentArtistSpan = document.getElementById("currentArtist");
+  const randomToggleBtn = document.getElementById("randomToggleBtn");
+
+  let rotationInterval = null;
+
+  function startRotation() {
+    if (rotationInterval) clearInterval(rotationInterval);
+    let deg = 0;
+    rotationInterval = setInterval(() => {
+      deg = (deg + 1) % 360;
+      rotatingImg.style.transform = `rotate(${deg}deg)`;
+    }, 40);
+  }
+
+  function stopRotation() {
+    if (rotationInterval) {
+      clearInterval(rotationInterval);
+      rotationInterval = null;
+    }
+  }
+
+  function getRandomIndex(current) {
+    let newIdx;
+    do {
+      newIdx = Math.floor(Math.random() * jubinSongs.length);
+    } while (newIdx === current && jubinSongs.length > 1);
+    return newIdx;
+  }
+
+  function loadSong(index, autoplay = true) {
+    if (index < 0) index = 0;
+    if (index >= jubinSongs.length) index = 0;
+    currentIndex = index;
+    const song = jubinSongs[currentIndex];
+    currentTitleSpan.textContent = song.title;
+    currentArtistSpan.textContent = "Jubin Nautiyal";
+    rotatingImg.src = song.cover || "https://placehold.co/300/2d2f45/white?text=🎤";
+    audio.src = song.source;
+    audio.load();
+    progressBar.value = 0;
+    if (autoplay) {
+      audio.play().then(() => {
+        controlIcon.classList.remove("fa-play");
+        controlIcon.classList.add("fa-pause");
+        startRotation();
+      }).catch(e => console.log("autoplay blocked"));
+    } else {
+      stopRotation();
+      controlIcon.classList.remove("fa-pause");
+      controlIcon.classList.add("fa-play");
+    }
+  }
+
+  function playRandomNext() {
+    const newIdx = getRandomIndex(currentIndex);
+    loadSong(newIdx, true);
+  }
+
+  function nextSongHandler() {
+    if (randomMode) {
+      playRandomNext();
+    } else {
+      let newIdx = (currentIndex + 1) % jubinSongs.length;
+      loadSong(newIdx, true);
+    }
+  }
+
+  function prevSongHandler() {
+    if (randomMode) {
+      playRandomNext();
+    } else {
+      let newIdx = (currentIndex - 1 + jubinSongs.length) % jubinSongs.length;
+      loadSong(newIdx, true);
+    }
+  }
+
+  function togglePlayPause() {
+    if (audio.paused) {
+      audio.play().then(() => {
+        controlIcon.classList.remove("fa-play");
+        controlIcon.classList.add("fa-pause");
+        startRotation();
+      }).catch(() => {});
+    } else {
+      audio.pause();
+      controlIcon.classList.remove("fa-pause");
+      controlIcon.classList.add("fa-play");
+      stopRotation();
+    }
+  }
+
+  playPauseBtn.addEventListener("click", togglePlayPause);
+  nextBtn.addEventListener("click", nextSongHandler);
+  prevBtn.addEventListener("click", prevSongHandler);
+
+  audio.addEventListener("timeupdate", () => {
+    if (!audio.paused && audio.duration) {
+      progressBar.value = audio.currentTime;
+      progressBar.max = audio.duration;
+    }
+  });
+
+  audio.addEventListener("loadedmetadata", () => {
+    progressBar.max = audio.duration;
+  });
+
+  audio.addEventListener("ended", () => {
+    nextSongHandler();
+  });
+
+  progressBar.addEventListener("input", (e) => {
+    audio.currentTime = e.target.value;
+  });
+
+  randomToggleBtn.addEventListener("click", () => {
+    randomMode = !randomMode;
+    randomToggleBtn.innerHTML = randomMode ? '<i class="fa-solid fa-dice-d6"></i> Random Next: ON' : '<i class="fa-solid fa-arrow-right"></i> Sequential Mode';
+    randomToggleBtn.style.background = randomMode ? "#f97316" : "#2a2f45";
+    setTimeout(() => {
+      if(randomMode) randomToggleBtn.style.background = "#2a2f45";
+      else randomToggleBtn.style.background = "#3a2a5a";
+    }, 200);
+  });
+
+  // Render all songs grid
+  function renderSongs() {
+    const gridContainer = document.getElementById("songsGridContainer");
+    gridContainer.innerHTML = "";
+    jubinSongs.forEach((song, idx) => {
+      const card = document.createElement("div");
+      card.className = "song-card";
+      card.innerHTML = `
+        <div class="song-card-img"><img src="${song.cover}" alt="cover"></div>
+        <div class="song-card-info"><h4>${escapeHtml(song.title)}</h4><p>${song.movie}</p></div>
+        <div class="play-icon-small"><i class="fa-solid fa-circle-play"></i></div>
+      `;
+      card.addEventListener("click", () => {
+        loadSong(idx, true);
+      });
+      gridContainer.appendChild(card);
+    });
+  }
+
+  // Render swiper carousel
+  function renderSwiper() {
+    const swiperWrapper = document.getElementById("popularSwiperWrapper");
+    swiperWrapper.innerHTML = "";
+    const top10 = jubinSongs.slice(0, 10);
+    top10.forEach(song => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+        <img src="${song.cover}" alt="${song.title}">
+        <div class="slide-info">
+          <h3>${escapeHtml(song.title)}</h3>
+          <p>${song.movie}</p>
+        </div>
+      `;
+      slide.addEventListener("click", () => {
+        const originalIndex = jubinSongs.findIndex(s => s.title === song.title);
+        if (originalIndex !== -1) loadSong(originalIndex, true);
+      });
+      swiperWrapper.appendChild(slide);
+    });
+    new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      centeredSlides: false,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      grabCursor: true,
+      loop: true,
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+  }
+
+  function escapeHtml(str) {
+    if(!str) return "";
+    return str.replace(/[&<>]/g, function(m) {
+      if (m === '&') return '&amp;';
+      if (m === '<') return '&lt;';
+      if (m === '>') return '&gt;';
+      return m;
+    });
+  }
+
+  // Initialize with random starting song
+  const randomStart = Math.floor(Math.random() * jubinSongs.length);
+  loadSong(randomStart, false);
+  renderSongs();
+  renderSwiper();
+
+  // Active nav simulation
+  document.querySelectorAll(".nav-item").forEach(item => {
+    item.addEventListener("click", function() {
+      document.querySelectorAll(".nav-item").forEach(nav => nav.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  console.log("🙏 Jubin Nautiyal exclusive page ready — 32 soulful tracks with random play mode");
+</script>
+</body>
+</html>

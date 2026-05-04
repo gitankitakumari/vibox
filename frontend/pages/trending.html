@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending | VI-BOX</title>
+    <link rel="stylesheet" href="../css/trending.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="trending-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h1>VI-BOX</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="discover.html"><i class="fas fa-compass"></i><span>Discover</span></a></li>
+                    <li class="active"><a href="trending.html"><i class="fas fa-chart-line"></i><span>Trending</span></a></li>
+                    <li><a href="album.html"><i class="fas fa-compact-disc"></i><span>Albums</span></a></li>
+                    <li><a href="playlist.html"><i class="fas fa-list"></i><span>Playlists</span></a></li>
+                    <li><a href="favorite.html"><i class="fas fa-heart"></i><span>Favorites</span></a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                </ul>
+            </nav>
+            <div class="trending-stats">
+                <h3><i class="fas fa-fire"></i> Today's Stats</h3>
+                <div class="stat-item">
+                    <span id="totalPlays">0</span>
+                    <p>Total Plays</p>
+                </div>
+                <div class="stat-item">
+                    <span id="activeUsers">0</span>
+                    <p>Active Listeners</p>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://picsum.photos/40/40?random=1" alt="User">
+                    <div class="user-info">
+                        <h4>Music Fan</h4>
+                        <p>Trending Now</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="trending-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-chart-line"></i> Trending</h1>
+                    <p>Most played songs and rising artists this week</p>
+                </div>
+                <div class="time-filter">
+                    <button class="filter-btn active" data-time="week">This Week</button>
+                    <button class="filter-btn" data-time="month">This Month</button>
+                    <button class="filter-btn" data-time="all">All Time</button>
+                </div>
+            </header>
+
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <span class="hero-badge">#1 Trending</span>
+                    <h2 id="topSongTitle">Loading...</h2>
+                    <p id="topSongArtist">---</p>
+                    <button class="hero-play-btn" id="heroPlayBtn"><i class="fas fa-play"></i> Play Now</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="waveform">
+                        <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                        <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                        <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Charts Section -->
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-trophy"></i> Top Charts</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div id="topChartsList" class="charts-list"></div>
+            </div>
+
+            <!-- Trending Artists -->
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-microphone-alt"></i> Trending Artists</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div id="trendingArtists" class="artists-grid"></div>
+            </div>
+
+            <!-- Hot Playlists -->
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-fire"></i> Hot Playlists</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div id="hotPlaylists" class="playlists-grid"></div>
+            </div>
+
+            <!-- Rising Stars -->
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-simple"></i> Rising Stars</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div id="risingStars" class="artists-grid-small"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Now Playing Bar -->
+    <div class="now-playing-bar" id="nowPlayingBar">
+        <div class="np-track">
+            <img id="npCover" src="https://picsum.photos/50/50" alt="cover">
+            <div class="np-info">
+                <h4 id="npTitle">Select a song</h4>
+                <p id="npArtist">--</p>
+            </div>
+            <button class="np-like" id="npLikeBtn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="np-controls">
+            <button id="npPrev"><i class="fas fa-backward-step"></i></button>
+            <button id="npPlayPause"><i class="fas fa-play"></i></button>
+            <button id="npNext"><i class="fas fa-forward-step"></i></button>
+        </div>
+        <div class="np-progress">
+            <span id="npCurrentTime">0:00</span>
+            <div class="progress-bar" id="npProgressBar">
+                <div class="progress-fill" id="npProgressFill"></div>
+            </div>
+            <span id="npDuration">0:00</span>
+        </div>
+        <div class="np-volume">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="npVolume" min="0" max="1" step="0.01" value="0.7">
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+    <script src="../js/trending.js"></script>
+</body>
+</html>

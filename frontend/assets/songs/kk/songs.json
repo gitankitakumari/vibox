@@ -1,0 +1,111 @@
+{
+  "artist": "Kk",
+  "image": "/assets/artists/kk.jpg",
+  "songs": [
+    {
+      "id": "aankhonmeinteri",
+      "title": "Aankhon Mein Teri",
+      "file": "AankhonMeinTeri.mp3"
+    },
+    {
+      "id": "aaspasshaikhuda",
+      "title": "Aas Pass Hai Khuda",
+      "file": "AasPassHaiKhuda.mp3"
+    },
+    {
+      "id": "alvida",
+      "title": "Alvida",
+      "file": "Alvida.mp3"
+    },
+    {
+      "id": "beetelamhe",
+      "title": "Beete Lamhe",
+      "file": "BeeteLamhe.mp3"
+    },
+    {
+      "id": "dusbahane",
+      "title": "Dus Bahane",
+      "file": "DusBahane.mp3"
+    },
+    {
+      "id": "guzaarish",
+      "title": "Guzaarish",
+      "file": "Guzaarish.mp3"
+    },
+    {
+      "id": "haijunoon",
+      "title": "Hai Junoon",
+      "file": "HaiJunoon.mp3"
+    },
+    {
+      "id": "khudajaane",
+      "title": "Khuda Jaane",
+      "file": "KhudaJaane.mp3"
+    },
+    {
+      "id": "kyamujhepyar",
+      "title": "Kya Mujhe Pyar",
+      "file": "KyaMujhePyar.mp3"
+    },
+    {
+      "id": "mainedilsekaha",
+      "title": "Maine Dil Se Kaha",
+      "file": "MaineDilSeKaha.mp3"
+    },
+    {
+      "id": "piyaaayena",
+      "title": "Piya Aaye Na",
+      "file": "PiyaAayeNa.mp3"
+    },
+    {
+      "id": "sachkehrahahai",
+      "title": "Sach Keh Raha Hai",
+      "file": "SachKehRahaHai.mp3"
+    },
+    {
+      "id": "tadaptadapk",
+      "title": "Tadap Tadap K",
+      "file": "TadapTadapK.mp3"
+    },
+    {
+      "id": "tuhihaqiqt",
+      "title": "Tu Hi Haqiqt",
+      "file": "TuHiHaqiqt.mp3"
+    },
+    {
+      "id": "tuhimerishabhai",
+      "title": "Tu Hi Meri Shab Hai",
+      "file": "TuHiMeriShabHai.mp3"
+    },
+    {
+      "id": "tujhesochtahoon",
+      "title": "Tujhe Sochta Hoon",
+      "file": "TujheSochtaHoon.mp3"
+    },
+    {
+      "id": "tujomila",
+      "title": "Tu Jo Mila",
+      "file": "TuJoMila.mp3"
+    },
+    {
+      "id": "tumhidekhonaa",
+      "title": "Tumhi Dekho Naa",
+      "file": "TumhiDekhoNaa.mp3"
+    },
+    {
+      "id": "tummilelovereprise",
+      "title": "Tum Mile Love Reprise",
+      "file": "TumMileLoveReprise.mp3"
+    },
+    {
+      "id": "zarasa",
+      "title": "Zara Sa",
+      "file": "ZaraSa.mp3"
+    },
+    {
+      "id": "zindagidopalki",
+      "title": "Zindagi Do Pal Ki",
+      "file": "ZindagiDoPalKi.mp3"
+    }
+  ]
+}

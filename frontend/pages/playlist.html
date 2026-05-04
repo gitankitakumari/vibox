@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VI-BOX</title>
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/playlist.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon"><i class="fas fa-music"></i></div>
+        <div>
+            <h2>VI-BOX</h2>
+            <p>Your Bollywood Music Hub</p>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="#" class="nav-link active"><i class="fas fa-list"></i> My Playlists</a>
+    </nav>
+
+    <div class="stats-panel">
+        <div class="stat">
+            <span id="totalPlaylists">0</span>
+            <p>Playlists</p>
+        </div>
+        <div class="stat">
+            <span id="totalSongsCount">0</span>
+            <p>Songs</p>
+        </div>
+    </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main-content">
+
+<!-- HOME VIEW -->
+<div id="homeView" class="view active">
+
+    <div class="view-header">
+        <h1>My Playlists</h1>
+
+        <div class="header-actions">
+            <button id="createPlaylistBtn" class="btn-primary">
+                + Create Playlist
+            </button>
+
+            <div class="search-box">
+                <input id="searchPlaylists" placeholder="Search playlists...">
+            </div>
+        </div>
+    </div>
+
+    <div id="playlistsGrid" class="playlists-grid"></div>
+
+</div>
+
+<!-- DETAIL VIEW -->
+<div id="detailView" class="view">
+
+    <div class="view-header">
+        <button id="backToHomeBtn">← Back</button>
+        <h2 id="detailPlaylistTitle"></h2>
+    </div>
+
+    <div id="playlistSongsList"></div>
+
+</div>
+
+</main>
+</div>
+
+<!-- PLAYER -->
+<div class="music-player">
+    <img id="currentCover"
+     src="../assets/images/default.jpg"
+     onerror="this.onerror=null; this.src='../assets/images/default.jpg'">
+    <div>
+        <h4 id="currentTitle">No song selected</h4>
+        <p id="currentArtist">--</p>
+    </div>
+    <button id="prevBtn">⏮</button>
+    <button id="playPauseBtn">▶</button>
+    <button id="nextBtn">⏭</button>
+    <span id="currentTime">0:00</span>
+    <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+    </div>
+    <span id="duration">0:00</span>
+</div>
+<!-- MODAL -->
+<div id="createModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Create Playlist</h3>
+            <button id="closeModalBtn" class="modal-close">×</button>
+        </div>
+        <div class="modal-body">
+            <input id="playlistNameInput" class="modal-input" placeholder="Playlist name">
+            <label class="modal-label">Cover Image (optional)</label>
+            <input type="file" id="playlistCoverInput" class="modal-file" accept="image/*">
+            <label class="modal-label">Select Songs</label>
+            <div id="songSelectorList" class="song-selector"></div>
+        </div>
+       <div class="modal-footer">
+    <button id="modalCancelBtn" class="btn-secondary">Cancel</button>
+    <button id="modalCreateBtn" class="btn-primary">Create</button>
+</div>
+    </div>
+</div>
+<audio id="audioPlayer"></audio>
+<script src="../js/playlist.js"></script>
+
+</body>
+</html>

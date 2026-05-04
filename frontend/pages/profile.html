@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VI-BOX | My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h1>VI-BOX</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="discover.html"><i class="fas fa-compass"></i><span>Discover</span></a></li>
+                    <li><a href="trending.html"><i class="fas fa-chart-line"></i><span>Trending</span></a></li>
+                    <li><a href="album.html"><i class="fas fa-compact-disc"></i><span>Albums</span></a></li>
+                    <li><a href="playlist.html"><i class="fas fa-list"></i><span>Playlists</span></a></li>
+                    <li><a href="favroite.html"><i class="fas fa-heart"></i><span>Favorites</span></a></li>
+                    <li class="active"><a href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-stats">
+                <h3>Quick Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-item"><i class="fas fa-music"></i><div><h4 id="sidebarSongs">0</h4><p>Songs Played</p></div></div>
+                    <div class="stat-item"><i class="fas fa-clock"></i><div><h4 id="sidebarTime">0h</h4><p>Listening Time</p></div></div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img id="sidebarAvatar" src="https://picsum.photos/40/40?random=1" alt="User">
+                    <div class="user-info">
+                        <h4 id="sidebarName">User</h4>
+                        <p>Music Lover</p>
+                    </div>
+                </div>
+                <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="profile-header">
+                <h1><i class="fas fa-user-circle"></i> My Profile</h1>
+                <p>Manage your account settings and preferences</p>
+            </div>
+
+            <div class="profile-content">
+                <!-- Left Card -->
+                <div class="profile-card">
+                    <div class="profile-avatar-section">
+                        <div class="avatar-wrapper">
+                            <img id="profileAvatar" class="avatar-img" src="https://picsum.photos/120/120?random=1" alt="Profile">
+                            <button class="upload-avatar-btn" onclick="document.getElementById('avatarInput').click()">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                        </div>
+                        <div class="profile-name">
+                            <h3 id="profileDisplayName">VI-BOX User</h3>
+                            <p>Member since <span id="memberSince">2024</span></p>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="profile-action-btn" onclick="switchTab('info')">
+                            <i class="fas fa-user"></i> Personal Information
+                        </button>
+                        <button class="profile-action-btn" onclick="switchTab('security')">
+                            <i class="fas fa-lock"></i> Security & Password
+                        </button>
+                        <button class="profile-action-btn" onclick="switchTab('stats')">
+                            <i class="fas fa-chart-line"></i> Listening Statistics
+                        </button>
+                        <button class="profile-action-btn" onclick="switchTab('activity')">
+                            <i class="fas fa-history"></i> Recent Activity
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="profile-info-section">
+                    <div class="section-tabs">
+                        <button class="section-tab active" data-tab="info">Personal Info</button>
+                        <button class="section-tab" data-tab="security">Security</button>
+                        <button class="section-tab" data-tab="stats">Statistics</button>
+                        <button class="section-tab" data-tab="activity">Activity</button>
+                    </div>
+
+                    <div class="section-content">
+                        <!-- Personal Info Tab -->
+                        <div id="infoTab" class="tab-pane active">
+                            <form id="profileForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" id="fullName" placeholder="Enter your full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input type="text" id="username" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" id="email" placeholder="your@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" id="phone" placeholder="+91 98765 43210">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Bio</label>
+                                    <textarea id="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Location</label>
+                                    <input type="text" id="location" placeholder="City, Country">
+                                </div>
+                                <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                            </form>
+                        </div>
+
+                        <!-- Security Tab -->
+                        <div id="securityTab" class="tab-pane">
+                            <form id="passwordForm">
+                                <div class="form-group">
+                                    <label>Current Password</label>
+                                    <input type="password" id="currentPassword" placeholder="Enter current password">
+                                </div>
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password" id="newPassword" placeholder="Enter new password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                                </div>
+                                <button type="submit" class="btn-primary"><i class="fas fa-key"></i> Update Password</button>
+                            </form>
+                        </div>
+
+                        <!-- Statistics Tab -->
+                        <div id="statsTab" class="tab-pane">
+                            <div class="stats-cards">
+                                <div class="stat-card">
+                                    <i class="fas fa-music"></i>
+                                    <h3 id="totalSongsPlayed">0</h3>
+                                    <p>Songs Played</p>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-clock"></i>
+                                    <h3 id="totalListeningTime">0h</h3>
+                                    <p>Listening Time</p>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-heart"></i>
+                                    <h3 id="totalFavorites">0</h3>
+                                    <p>Favorite Songs</p>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-list"></i>
+                                    <h3 id="totalPlaylists">0</h3>
+                                    <p>Playlists Created</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Favorite Genre</label>
+                                <select id="favoriteGenre" class="form-control" style="background:#1a1e2c; border:1px solid #2a2f48; padding:0.8rem; border-radius:12px; color:white;">
+                                    <option>Pop</option>
+                                    <option>Rock</option>
+                                    <option>Hip Hop</option>
+                                    <option>Electronic</option>
+                                    <option>Bollywood</option>
+                                    <option>Classical</option>
+                                </select>
+                            </div>
+                            <button class="btn-primary" onclick="savePreferences()"><i class="fas fa-save"></i> Save Preferences</button>
+                        </div>
+
+                        <!-- Activity Tab -->
+                        <div id="activityTab" class="tab-pane">
+                            <div class="activity-list" id="activityList">
+                                <!-- Activity items will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+  <script src="../js/profile.js"></script>
+</body>
+</html>

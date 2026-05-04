@@ -1,0 +1,106 @@
+{
+  "artist": "Alka Yagnik",
+  "image": "/assets/artists/alka-yagnik.jpg",
+  "songs": [
+    {
+      "id": "aankhenbhihotihai",
+      "title": "Aankhen Bhi Hoti Hai",
+      "file": "AankhenBhiHotiHai.mp3"
+    },
+    {
+      "id": "andekhianjaani",
+      "title": "Andekhi Anjaani",
+      "file": "AndekhiAnjaani.mp3"
+    },
+    {
+      "id": "bheegibheegi",
+      "title": "Bheegi Bheegi",
+      "file": "BheegiBheegi.mp3"
+    },
+    {
+      "id": "bolechudiyan",
+      "title": "Bole Chudiyan",
+      "file": "BoleChudiyan.mp3"
+    },
+    {
+      "id": "dolaredola",
+      "title": "Dola Re Dola",
+      "file": "DolaReDola.mp3"
+    },
+    {
+      "id": "haimeradil",
+      "title": "Hai Mera Dil",
+      "file": "HaiMeraDil.mp3"
+    },
+    {
+      "id": "humkohumise",
+      "title": "Humko Humise",
+      "file": "HumkoHumise.mp3"
+    },
+    {
+      "id": "humtumhenchahte",
+      "title": "Hum Tumhen Chahte",
+      "file": "HumTumhenChahte.mp3"
+    },
+    {
+      "id": "jabkoibaatbigad",
+      "title": "Jab Koi Baat Bigad",
+      "file": "JabKoiBaatBigad.mp3"
+    },
+    {
+      "id": "kajrare",
+      "title": "Kajra Re",
+      "file": "KajraRe.mp3"
+    },
+    {
+      "id": "kitnapyaaratujhe",
+      "title": "Kitna Pyaara Tujhe",
+      "file": "KitnaPyaaraTujhe.mp3"
+    },
+    {
+      "id": "merimehbooba",
+      "title": "Meri Mehbooba",
+      "file": "MeriMehbooba.mp3"
+    },
+    {
+      "id": "mujhsedostikaroge",
+      "title": "Mujhse Dosti Karoge",
+      "file": "MujhseDostiKaroge.mp3"
+    },
+    {
+      "id": "sajansajanteri",
+      "title": "Sajan Sajan Teri",
+      "file": "SajanSajanTeri.mp3"
+    },
+    {
+      "id": "sansanana",
+      "title": "San Sanana",
+      "file": "SanSanana.mp3"
+    },
+    {
+      "id": "surajhuamaddham",
+      "title": "Suraj Hua Maddham",
+      "file": "SurajHuaMaddham.mp3"
+    },
+    {
+      "id": "taalsetaal",
+      "title": "Taal Se Taal",
+      "file": "TaalSeTaal.mp3"
+    },
+    {
+      "id": "teriumeed",
+      "title": "Teri Umeed",
+      "file": "TeriUmeed.mp3"
+    },
+    {
+      "id": "tiptipbarsa",
+      "title": "Tip Tip Barsa",
+      "file": "TipTipBarsa.mp3"
+    },
+    {
+      "id": "tumhidekhonaa-19",
+      "title": "Tumhi Dekho Naa",
+      "file": "TumhiDekhoNaa(2).mp3"
+    }
+  ]
+}
