@@ -125,7 +125,10 @@ node server.js
 * Real-time streaming integration
 
 ---
+## 🔗 Links
 
+- 🌐 Live Demo: https://gitankitakumari.github.io/vibox/
+- 📂 GitHub: https://github.com/gitankitakumari/vibox
 ## 👩‍💻 Author
 
 **Ankita Kumari**
